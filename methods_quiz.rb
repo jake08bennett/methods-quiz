@@ -37,7 +37,7 @@ module MethodsQuiz
 	
 	# TODO - write closer_to
 
-def closer_to(ans, g1, g2)
+	def closer_to(ans, g1, g2)
 		close1 = (g1 - ans).abs
 		close2 = (g2 - ans).abs
 		if close1 < close2
@@ -46,6 +46,14 @@ def closer_to(ans, g1, g2)
 			return g2
 		else
 			return 0
+		end
+	end
+
+	def two_as_one(a, b, c)
+		if (a+b=c) || (b+c=a) || (b+a=b)
+			return true
+		else
+			return false
 		end
 	end
 
