@@ -37,6 +37,19 @@ module MethodsQuiz
 	
 	# TODO - write closer_to
 
+def closer_to(ans, g1, g2)
+		close1 = (g1 - ans).abs
+		close2 = (g2 - ans).abs
+		if close1 < close2
+			return g1
+		elsif close2 < close1
+			return g2
+		else
+			return 0
+		end
+	end
+
+
 	# TODO - write two_as_one?
 
 	# TODO - write pig_latinify
