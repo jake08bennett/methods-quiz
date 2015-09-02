@@ -25,4 +25,11 @@ class MethodsQuizTest < MiniTest::Test
     assert_equal "not yaught", @m.not_string("not yaught")
   end
 
+  def test_icy_hot?
+		assert_equal true, @m.icy_hot?(-43, 169)
+		assert_equal false, @m.icy_hot?(-15, 67)
+		assert_equal true, @m.icy_hot?(0, 100)
+		assert_equal false, @m.icy_hot?(6, 599)
+	end
+
 end
