@@ -61,5 +61,16 @@ module MethodsQuiz
 	# TODO - write two_as_one?
 
 	# TODO - write pig_latinify
-
+	def pig_latinify(wordstring)
+		str = wordstring.downcase.gsub(/\s+/, "") #gsub.replaces
+		if str.start_with?("a") || str.start_with?("e") || str.start_with?("i") || str.start_with?("o") || str.start_with?("u")
+			return str + "way"
+		elsif str == "shit" || str == "fuck" || str == "arse" || str == "munter" || str == "cock" || str == "pussy" || str == "asshole" ||  str == "motherfucker" |
+			return str.gsub("a", "*").gsub("e", "*").gsub("i", "*").gsub("o", "*").gsub("u", "*")
+		else
+			suffix = str[0]
+			str[0] = ""
+			return str + suffix + "ay"
+		end
+	end
 end
