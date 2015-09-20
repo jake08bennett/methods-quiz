@@ -2,20 +2,13 @@ module MethodsQuiz
 	
 	# TODO - write has_teen?
 
-	def has_teen(a,b,c)
-		if a > 13 && a < 19
-			age1 = true
-	 elsif b>13 && b < 19
-			age2 = true
-   elsif c>13 && c<19
-   		age3 = true
-   end
-   if age1= true || age2 = true || age3 = true
-   		return true
-   else
-   		return false
-		end
-	end
+	def has_teen(age1, age2, age3)
+		if (age1 >= 13 && age1 <= 19) || (age2 >= 13 && age2 <= 19) || (age3 >= 13 && age3 <= 19)
+			return true
+		else
+			return false
+   		end
+   	end
 	
 	# TODO - write not_string
 	def not_string(str)
@@ -37,13 +30,13 @@ module MethodsQuiz
 	
 	# TODO - write closer_to
 
-	def closer_to(ans, g1, g2)
-		close1 = (g1 - ans).abs
-		close2 = (g2 - ans).abs
+	def closer_to(ans, n1, n2)
+		close1 = (n2 - ans).abs
+		close2 = (n1 - ans).abs
 		if close1 < close2
-			return g1
+			return n2
 		elsif close2 < close1
-			return g2
+			return n1
 		else
 			return 0
 		end
