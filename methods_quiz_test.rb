@@ -14,18 +14,18 @@ class MethodsQuizTest < MiniTest::Test
 	# TODO - write tests here
 
 	def test_has_teen
-    assert_equal true, @m.has_teen(14, 12, 10)
-    assert_equal true, @m.has_teen(9, 12, 15)
-    assert_equal true, @m.has_teen(1, 13, 10)
-    assert_equal true, @m.has_teen(19, 12, 10)
-  end
+    		assert_equal true, @m.has_teen(14, 12, 10)
+    		assert_equal true, @m.has_teen(9, 12, 15)
+    		assert_equal true, @m.has_teen(1, 13, 10)
+    		assert_equal true, @m.has_teen(19, 12, 10)
+	end
 
-  def test_not_string
-    assert_equal "not yo", @m.not_string("yo")
-    assert_equal "not yaught", @m.not_string("not yaught")
-  end
+  	def test_not_string
+		 assert_equal "not yo", @m.not_string("yo")
+		 assert_equal "not yaught", @m.not_string("not yaught")
+  	end
 
-  def test_icy_hot?
+  	def test_icy_hot?
 		assert_equal true, @m.icy_hot?(-43, 169)
 		assert_equal false, @m.icy_hot?(-15, 67)
 		assert_equal true, @m.icy_hot?(0, 100)
@@ -43,6 +43,14 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.two_as_one(10, 8, 2)
 		assert_equal true, @m.two_as_one(15, 5, 10)
 	end
-		
+	
+	def test_pig_latinify
+		assert_equal "eyhay", @m.pig_latinify(" hey ")
+		assert_equal "oloyay", @m.pig_latinify("yolo")
+		assert_equal "appleway", @m.pig_latinify(" apple")
+		assert_equal "appleway", @m.pig_latinify("apple")
+		assert_equal "banteray", @m.pig_latinify("banter")
+		assert_equal "f*ck", @m.pig_latinify("fuck")
+	end	
 
 end
